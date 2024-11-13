@@ -1,0 +1,437 @@
+/*  <!-- Ejercicio 1: Filas por defecto --> */
+    .container {
+    display: flex; 
+    gap: 10px; 
+    background-color: #bedb16;
+    padding: 10px;
+    border-radius: 8px;
+     }
+  
+    .Mesa, .Tabla, .Silla {
+    background-color: #1ee61e;
+    color: rgb(178, 189, 23);
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+    flex: 1; 
+    }
+     /*  <!-- Ejercicio 2: Columna --> */ 
+    .container-column {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    background-color: #e22121;
+    padding: 10px;
+    border-radius: 8px;
+    }
+  
+     .Mesa, .Tabla, .Silla{
+    background-color: #d1a11b;
+    color: rgb(209, 166, 23);
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+  }
+/*  <!-- Ejercicio 3: Columna inversa  --> */ 
+.container-reverse {
+    display: flex;
+    flex-direction: column-reverse; 
+    gap: 10px; 
+    background-color: #42bd24;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .Silla, .Tabla, .Mesa {
+    background-color: #FF5722;
+    color: rgb(207, 42, 42);
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  /* <!-- Ejercicio 4: Fila inversa -->  */ 
+  .container-row-reverse {
+    display: flex;
+    flex-direction: row-reverse; 
+    gap: 10px; 
+    background-color: #c71515;
+    padding: 10px;
+    border-radius: 8px;
+    
+  }
+  .Mesa, .Tabla, .Silla{
+    background-color: #FF5722;
+    color: rgb(27, 116, 56);
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+    /*  Ejercicio 5: Cambia flex-direction en dispositivos grandes -->  */ 
+    .container-large {
+        display: flex;
+        flex-direction: column; /* Disposición en columna en dispositivos pequeños */
+        gap: 10px;
+        background-color: #6b1414;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      
+      .Tabla, .Mesa, .Silla {
+        background-color: #4CAF50;
+        color: rgb(226, 31, 31);
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        text-align: center;
+      }
+      
+      /* Cambiar a fila en pantallas grandes */
+      @media (min-width: 768px) {
+        .container-large {
+          flex-direction: row; 
+        }
+      }
+      
+      
+        /*  <!-- Ejercicio 6: Cambia flex-direction en pantallas pequeñas -->  */ 
+     .container-small {
+        display: flex;
+        flex-direction: row; 
+        gap: 10px;
+        background-color: #58574d;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      
+      .Tabla,   .Mesa,  .Silla {
+        background-color: #f321c6;
+        color: rgb(40, 122, 16);
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        text-align: center;
+      }
+      
+      /* Cambiar a columna en dispositivos pequeños */
+      @media (max-width: 500px) {
+        .container-small {
+          flex-direction: column; /* Cambia a columna en pantallas de hasta 500px */
+        }
+      }
+
+      
+    /*<!-- Ejercicio 7: Justificar contenido centrado --> */ 
+
+      .container {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 10px;
+        background-color: #7a1a1a;
+        height: 100%; /* Se adapta a la altura establecida en el HTML */
+        padding: 10px;
+        border-radius: 8px;
+      }
+      
+      .Silla, .Mesa, .Tabla {
+        background-color: #af984c;
+        color: rgb(247, 102, 102);
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        text-align: center;
+      }
+        /*<!-- Ejercicio 8: Distribuir espacio con 'space-around --> */ 
+        .container-space-around {
+            display: flex;
+            justify-content: space-around; 
+            gap: 10px;
+            background-color: #631919;
+            padding: 10px;
+            border-radius: 8px;
+          }
+          
+          .Tabla, .Mesa, .silla {
+            background-color: #FF5722;
+            color: rgb(22, 170, 46);
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+          }
+        /*<!-- Ejercicio 9: Distribuir espacio con 'space-between--> */  
+            .container-space-between {
+            display: flex;
+            justify-content:  space-between; 
+            gap: 10px;
+            background-color: #771010;
+            padding: 10px;
+            border-radius: 8px;
+          }
+          
+            .Tabla,     .Mesa,  .Silla {
+            background-color: #FF5722;
+            color: rgb(107, 16, 16);
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+          }
+          /*<!--  Ejercicio 10: Flex-direction cambia en pantallas pequeñas y grandes--> */   
+          .container-responsive {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            background-color: #4ef738;
+            padding: 10px;
+            border-radius: 8px;
+          }
+          
+          .Tabla, .Mesa, .Silla {
+            background-color: #FF5722;
+            color: rgb(228, 19, 19);
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+          }
+          
+          /* Cambiar a fila en pantallas medianas */
+          @media (min-width: 600px) and (max-width: 1024px) {
+            .container-responsive {
+              flex-direction: row; /* Disposición en fila en pantallas medianas */
+            }
+          }
+          
+          /* Cambiar a columna en pantallas grandes */
+          @media (min-width: 1025px) {
+            .container-responsive {
+              flex-direction: column; 
+            }
+          }
+        /*<!- Ejercicio 11: Cambia el color de fondo en pantallas grandes */     
+        .container-responsive {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            background-color: #e42828;
+            padding: 10px;
+            border-radius: 8px;
+          }
+          
+          .Tabla, .Mesa, .Silla {
+            background-color: #FF5722;
+            color: rgb(160, 152, 130);
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+          }
+          
+          
+          @media (min-width: 600px) and (max-width: 1024px) {
+            .container-responsive {
+              flex-direction: row; 
+            }
+          }
+          
+         
+          @media (min-width: 1025px) {
+            .container-responsive {
+              flex-direction: column; 
+            }
+          }
+          /*<!- Ejercicio 12: Cambia el tamaño de texto en pantallas pequeñas */
+          .container-small.container-text-small {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            background-color: #c0297c;
+            padding: 10px;
+            border-radius: 8px;
+          }
+          
+          .Tabla, .Mesa, .Silla {
+            background-color: #FF5722;
+            color: rgb(206, 164, 50);
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+          }
+          
+          @media (min-width: 600px) and (max-width: 1024px) {
+            .container-responsive {
+              flex-direction: row; 
+            }
+          }
+           /*<!-Ejercicio 13: Cambia padding en pantallas grandes*/
+          
+           .container-padding-large {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #af3131;
+            padding: 10px;
+            border-radius: 8px;
+          }
+          
+          .Silla, .Mesa, .Tabla {
+            background-color: #FF5722;
+            color: rgb(62, 150, 22);
+            padding: 15px; 
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+          }
+          
+          
+          @media (min-width: 900px) {
+            .Silla, .Mesa, .Tabla {
+              padding: 30px; 
+            }
+          }
+          
+
+          /*<!-Ejercicio 14: Cambia color de texto en pantallas pequeñas */
+
+          .container-text-color-small {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #eb1f1f;
+            padding: 10px;
+            border-radius: 8px;
+          }
+          
+          .Silla, .Mesa, .Tabla {
+            background-color: #FF5722;
+            color: rgb(160, 152, 130);
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+          }
+          
+          
+          @media (max-width: 600px) {
+            .Silla, .Mesa, .Tabla {
+              color: #af8717; 
+            }
+          }
+         /*<!-Ejercicio 15: Cambia dirección de flex en pantallas medianas */
+         .container-flex-md {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            background-color: #b33a3a;
+            padding: 10px;
+            border-radius: 8px;
+          }
+          
+          .Silla, .Mesa, .Tabla {
+            background-color: #ff7a22;
+            color: rgb(219, 52, 52);
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+          }
+          
+          
+          @media (min-width: 700px) and (max-width: 900px) {
+            .container-flex-md {
+              flex-direction: row; 
+            }
+          }
+           /*<!-Ejercicio 16: Cambiar color de fondo y tamaño de fuente, en un rango (min
+        y max) que elijass */
+        section {
+            padding: 20px;
+            font-family: 'Times New Roman', Times serif;
+          }
+        
+          
+          .container {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            background-color: #51881d; 
+            border-radius: 8px;
+            transition: background-color 0.3s ease; 
+          }
+        
+          
+          .item {
+            padding: 20px;
+            background-color: #c56262;
+            border: 1px solid #7da337;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px; 
+            transition: font-size 0.3s ease; 
+          }
+
+       /*<!-Ejercicio 17: Establecer margin left y margin right 16px en mobile y 24px desktop  */    
+    
+     section {
+    padding: 20px;
+    font-family: 'Times New Roman', Times serif;
+    }
+
+     
+    .container {
+     display: flex; 
+    flex-wrap: wrap; 
+    }
+
+    
+    .container {
+      margin-left: 16px; 
+     margin-right: 16px; 
+        padding: 10px;
+        background-color: #a31515; 
+        border: 1px solid #2c9c16;
+     border-radius: 5px;
+        text-align: center;
+     }
+
+    
+     @media (min-width: 768px) {
+        .container > div {
+      margin-left: 24px;
+      margin-right: 24px; 
+        }
+     }
+     /*<!-Ejercicio 18: Establecer padding left y padding right 16px en mobile y 24px desktop  */  
+     .container {
+        display: flex; /
+      }
+    
+      
+      .container  {
+        padding-left: 16px; 
+        padding-right: 16px; 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        background-color: #b13030; 
+        border: 1px solid #1bc41b;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 10px; 
+      }
+    
+      
+      @media (min-width: 768px) {
+        .container > div {
+          padding-left: 24px; 
+          padding-right: 24px; 
+        }
+      }

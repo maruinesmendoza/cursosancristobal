@@ -5,8 +5,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicios de Flexbox y Media Queries</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <styles >
+    <style>
+      /* Estilos básicos */
+      body {
+        font-family: 'Times New Roman', Times serif ;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        display: flex;
+        gap: 10px;
+        background-color: lightgray;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+      }
+
+      .item {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        flex: 1;
+      }
+
+      /* Media queries básicas */
+      @media (min-width: 600px) {
+        .container {
+          background-color: lightblue;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .container {
+          background-color: lightcoral;
+        }
+      }
     </style>
   </head>
   <body>
@@ -17,26 +52,25 @@
     <!-- Ejercicio 1: Filas por defecto -->
     <section>
       <h3>Ejercicio 1: Flexbox en fila (default)</h3>
-      <div class="container-row">
+      <div class="row">
         <div class="Mesa">Mesa</div>
         <div class="Tabla">Tabla</div>
         <div class="Silla">Silla</div>
       </div>
     </section>
-    
+
     <!-- Ejercicio 2: Columna -->
     <section>
       <h3>Ejercicio 2: Flexbox en columna</h3>
-      <div class="container-column">
       <div class=".column">
         <div class="Mesa">Mesa</div>
         <div class="Tabla">Tabla</div>
         <div class="Silla">Silla</div>
       </div>
-    </div>
     </section>
-     <!-- Ejercicio 3: Columna inversa -->
-     <section>
+
+    <!-- Ejercicio 3: Columna inversa -->
+    <section>
       <h3>Ejercicio 3: Columna inversa</h3>
       <div class="column-reverse">
         <div class="Silla">Silla</div>
@@ -54,33 +88,35 @@
         <div class="Silla">Silla</div>
       </div>
     </section>
-     <!-- Ejercicio 5: Cambia flex-direction en dispositivos grandes -->
-     <section>
+
+    <!-- Ejercicio 5: Cambia flex-direction en dispositivos grandes -->
+    <section>
       <h3>Ejercicio 5: Flex-direction cambia en pantallas grandes</h3>
       <style>
         @media (min-width: 768px) {
         }
       </style>
-      <div class="container-large">
+      <div class="">
         <div class="Tabla">Tabla</div>
         <div class="Mesa">Mesa</div>
         <div class="Silla">Silla</div>
       </div>
     </section>
 
-     <!-- Ejercicio 6: Cambia flex-direction en pantallas pequeñas -->
-     <section>
+    <!-- Ejercicio 6: Cambia flex-direction en pantallas pequeñas -->
+    <section>
       <h3>Ejercicio 6: Flex-direction cambia en pantallas pequeñas</h3>
       <style>
         @media (max-width: 500px) {
         }
       </style>
-      <div class="container-responsive-small">
+      <div class=" small">
         <div class="Tabla">Tabla</div>
         <div class="Mesa"> Mesa</div>
         <div class="Silla">Silla</div>
       </div>
     </section>
+
     <!-- Ejercicio 7: Justificar contenido centrado -->
     <section>
       <h3>Ejercicio 7: Centrado vertical en columna</h3>
@@ -90,34 +126,36 @@
         <div class="Tabla">Tabla</div>
       </div>
     </section>
+
     <!-- Ejercicio 8: Distribuir espacio uniformemente -->
     <section>
       <h3>Ejercicio 8: Distribuir espacio con 'space-around'</h3>
-      <div class="container-space-around">
+      <div class="space-around">
         <div class="Silla"> Silla</div>
         <div class="Tabla"> Tabla</div>
         <div class= "Mesa"> Mesa</div>
       </div>
     </section>
+
     <!-- Ejercicio 9: Distribuir espacio entre items -->
     <section>
       <h3>Ejercicio 9: Distribuir espacio con 'space-between'</h3>
-      <div class=" container-space-between">
+      <div class="space-between">
         <div class= "Silla">  Silla</div>
         <div class= "Tabla">  Tabla</div>
         <div class=  "Mesa">Mesa</div>
       </div>
     </section>
-     <!-- Ejercicio 10: Flex-direction en pantallas pequeñas y grandes -->
-     <section>
+
+    <!-- Ejercicio 10: Flex-direction en pantallas pequeñas y grandes -->
+    <section>
       <h3>
         Ejercicio 10: Flex-direction cambia en pantallas pequeñas y grandes
       </h3>
-       <div class="container-margin-mediaquery">
-        <div class="Mesamediaquery">Mesa</div>
+       <div class="container-margin-mediaquery"></div>
+        <div class="Mesa">Mesa</div>
         <div class="Tabla">Tabla</div>
         <div class="Silla">Silla</div>
-      </div>
       </div>
     </section>
 
@@ -126,43 +164,37 @@
     <!-- Ejercicio 11: Cambiar color de fondo en pantallas grandes -->
     <section>
       <h3>Ejercicio 11: Cambia el color de fondo en pantallas grandes</h3>
-      <style>
-        @media (min-width: 800px) {
-
-        }
-      </style>
-      <div class=" container-bg-large">
+      <div class="container container-bg-large">
         <div class="Mesa">Mesa</div>
         <div class="Silla">Silla</div>
         <div class="Tabla">Tabla</div>
       </div>
     </section>
+
     <!-- Ejercicio 12: Cambiar tamaño de texto en pantallas pequeñas -->
     <section>
       <h3>Ejercicio 12: Cambia el tamaño de texto en pantallas pequeñas</h3>
-      <style>
-        @media (max-width: 500px) {
-        }
-      </style>
-      <div class="container-text-small">
+      <div class="container container-text-small">
         <div class="Silla">Silla</div>
         <div class="Tabla">Tabla</div>
         <div class="Mesa">Mesa</div>
       </div>
     </section>
-     <!-- Ejercicio 13: Cambiar padding en pantallas grandes -->
-     <section>
+
+    <!-- Ejercicio 13: Cambiar padding en pantallas grandes -->
+    <section>
       <h3>Ejercicio 13: Cambia padding en pantallas grandes</h3>
       <style>
         @media (min-width: 900px) {
         }
       </style>
-      <div class=" container-padding-large">
+      <div class="container container-padding-large">
         <div class="Silla">Silla</div>
         <div class="Tabla">Tabla</div>
         <div class="Mesa">Mesa</div>
       </div>
     </section>
+
     <!-- Ejercicio 14: Cambiar color de texto en pantallas pequeñas -->
     <section>
       <h3>Ejercicio 14: Cambia color de texto en pantallas pequeñas</h3>
@@ -177,33 +209,34 @@
       </div>
     </section>
 
-       <!-- Ejercicio 15: Cambiar dirección de flex en pantallas medianas -->
-       <section>
-        <h3>Ejercicio 15: Cambia dirección de flex en pantallas medianas</h3>
-        <style>
-          @media (min-width: 700px) and (max-width: 900px) {
-          }
-        </style>
-        <div class=" container-flex-md">
-          <div class="Silla">Silla</div>
-          <div class="Mesa">Mesa</div>
-          <div class="Tabla">Tabla</div>
-        </div>
-      </section>
+    <!-- Ejercicio 15: Cambiar dirección de flex en pantallas medianas -->
+    <section>
+      <h3>Ejercicio 15: Cambia dirección de flex en pantallas medianas</h3>
+      <style>
+        @media (min-width: 700px) and (max-width: 900px) {
+        }
+      </style>
+      <div class=" container-flex-md">
+        <div class="Silla">Silla</div>
+        <div class="Mesa">Mesa</div>
+        <div class="Tabla">Tabla</div>
+      </div>
+    </section>
 
-       <!-- Ejercicio 16: Cambiar color de fondo y tamaño de fuente en un rango (min y width) que elijas -->
+    <!-- Ejercicio 16: Cambiar color de fondo y tamaño de fuente en un rango (min y width) que elijas -->
     <section>
       <h3>
         Ejercicio 16: Cambiar color de fondo y tamaño de fuente, en un rango (min
         y max) que elijas
       </h3>
       <style></style>
-      <div class=" container-bg-font">
+      <div class="container container-flex-md">
         <div class="Silla">Silla</div>
         <div class="Mesa">Mesa</div>
         <div class="Tabla">Tabla</div>
       </div>
     </section>
+
     <!-- Ejercicio 17: Establecer margin left y margin right 16px en mobile y 24px desktop -->
     <section>
       <h3>
@@ -211,36 +244,39 @@
         24px desktop
       </h3>
       <style></style>
-      <div class="container-margin">
+      <div class="container container-flex-md">
         <div class="Silla">Silla</div>
         <div class="Mesa">Mesa</div>
         <div class="Tabla">Tabla</div>
       </div>
     </section>
+
     <!-- Ejercicio 18: Establecer padding left y padding right 16px en mobile y 24px desktop -->
-  <section>
-    <h3>
-      Ejercicio 18: Establecer padding left y padding right 16px en mobile y
-      24px desktop
-    </h3>
-    <style></style>
-    <div class="container-padding">
-      <div class="Silla">Silla</div>
-      <div class="Mesa">Mesa</div>
-      <div class="Tabla">Tabla</div>
-    </div>
-      <!-- Ejercicio 19: Establecer margin top y margin bottom 16px en mobile y 24px desktop -->
-      <section>
-        <h3>
-          Ejercicio 19: Establecer margin top y margin bottom 16px en mobile y
-          24px desktop
-        </h3>
-        <style></style>
-        <div class="container-margin">
-          <div class="Tabla">Tabla</div>
-          <div class="Mesa">Mesa</div>
-          <div class="Silla">Silla</div>
-        </div>
-      </section>
+    <section>
+      <h3>
+        Ejercicio 18: Establecer padding left y padding right 16px en mobile y
+        24px desktop
+      </h3>
+      <style></style>
+      <div class="container container-flex-md">
+        <div class="Silla">Silla</div>
+        <div class="Mesa">Mesa</div>
+        <div class="Tabla">Tabla</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 19: Establecer margin top y margin bottom 16px en mobile y 24px desktop -->
+    <section>
+      <h3>
+        Ejercicio 19: Establecer margin top y margin bottom 16px en mobile y
+        24px desktop
+      </h3>
+      <style></style>
+      <div class="container container-flex-md">
+        <div class="Tabla">Tabla</div>
+        <div class="Mesa">Mesa</div>
+        <div class="Silla">Silla</div>
+      </div>
+    </section>
   </body>
 </html>
